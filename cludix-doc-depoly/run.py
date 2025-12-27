@@ -95,7 +95,7 @@ def extract_tar():
     os.makedirs(os.path.dirname(TARGET_DIR), exist_ok=True)
 
     with tarfile.open(TEMP_FILE, 'r:gz') as tar:
-        tar.extractall(path=os.path.dirname(TARGET_DIR), filter='data')
+        tar.extractall(path=os.path.dirname(TARGET_DIR))
 
     print("解压完成")
 
